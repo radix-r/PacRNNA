@@ -7,7 +7,7 @@ import pacsim.*;
  *
  * Implements Repetitive Nearest Neighbor Search Algorithm for Pac-Man
  *
- * @author Bailey Brooks and Ross Wagner
+ * @author Bailey Brooks & Ross Wagner
  *
  *
  *

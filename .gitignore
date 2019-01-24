@@ -10,3 +10,4 @@
 # OSgenerated files
 ###################
 .DS_Store
+.idea/vcs.xml
