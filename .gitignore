@@ -1,5 +1,12 @@
 #IntelliJ Related files
-######################
-*.idea
-*.iml
+#######################
+#*.idea
+#*.iml
 
+# Compiled source
+#################
+*.class
+
+# OSgenerated files
+###################
+.DS_Store
