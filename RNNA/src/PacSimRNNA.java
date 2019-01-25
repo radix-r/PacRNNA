@@ -35,10 +35,26 @@ public class PacSimRNNA implements PacAction {
     public void init() {
         simTime = 0;
         path = new ArrayList();
+
+        // calc cost table
+
+        // food array
     }
+
+
 
     @Override
     public PacFace action( Object state ){
+
+
+        // calculate only if list is empty (once)
+        if( path.isEmpty() ) {
+
+            // calc the stuff bro
+
+        }
+
+
         PacFace face = null;
         return face;
     }
