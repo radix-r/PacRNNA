@@ -4,14 +4,9 @@ import java.util.List;
 import pacsim.*;
 
 /**
- *
- * Implements Repetitive Nearest Neighbor Search Algorithm for Pac-Man
- *
- * @author Bailey Brooks & Ross Wagner
- *
- *
- *
- *
+ * University of Central Florida
+ * CAP4630 - Spring 2010
+ * Authors: Bailey Brooks and Ross Wagner
  **/
 
 
@@ -29,12 +24,15 @@ public class PacSimRNNA implements PacAction {
         System.out.println("\nTSP using RNNA agent by Bailey Brooks and Ross Wagner:");
         System.out.println("\nMaze : " + args[ 0 ] + "\n" );
         new PacSimRNNA( args[ 0 ] );
+
+
     }
 
     @Override
     public void init() {
         simTime = 0;
         path = new ArrayList();
+
     }
 
     @Override
