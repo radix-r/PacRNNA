@@ -1,5 +1,6 @@
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.*;
 import java.util.List;
 import pacsim.*;
 
@@ -16,6 +17,7 @@ public class PacSimRNNA implements PacAction {
 
     private List<Point> path;
     private int simTime;
+    private List<PotentialSolution> potentialSolutions;
 
     public PacSimRNNA( String fname ) {
         PacSim sim = new PacSim( fname );
@@ -32,10 +34,8 @@ public class PacSimRNNA implements PacAction {
     public void init() {
         simTime = 0;
         path = new ArrayList();
+        potentialSolutions = new ArrayList<PotentialSolution>();
 
-        // calc cost table
-
-        // food array
     }
 
 
@@ -47,10 +47,16 @@ public class PacSimRNNA implements PacAction {
         // calculate only if list is empty (once)
         if( path.isEmpty() ) {
 
+            // calc cost table
+
+            // food array
+
             // calc the stuff bro
+            PotentialSolution ps = new PotentialSolution();
 
         }
 
+        Collections.sort(potentialSolutions);
 
         PacFace face = null;
         return face;
