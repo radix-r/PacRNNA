@@ -18,6 +18,7 @@ public class PacSimRNNA implements PacAction {
     private List<Point> path;
     private int simTime;
     private List<PotentialSolution> potentialSolutions;
+    private List<Point> food; // he entries in this array should be ordered according to increasing values of the x-value, and for each value of x, according to increasing values of the y-value
 
     public PacSimRNNA( String fname ) {
         PacSim sim = new PacSim( fname );
@@ -52,15 +53,14 @@ public class PacSimRNNA implements PacAction {
         // calculate only if list is empty (once)
         if( path.isEmpty() ) {
 
+            // food array
+            food = getAllFood(grid);
+
             // calc cost table
             int[][] costTable = generateCostTable(grid, pc);
 
-
-            // food array
-
             // calc the stuff bro
             PotentialSolution ps = new PotentialSolution();
-
         }
 
         Collections.sort(potentialSolutions);
@@ -101,6 +101,10 @@ public class PacSimRNNA implements PacAction {
 
         System.out.println();
         return costTable;
+    }
+
+    private List<Point> getAllFood(PacCell[][] state){
+        return PacUtils.findFood( state);
     }
 
 }
