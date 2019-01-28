@@ -57,6 +57,7 @@ public class PacSimRNNA implements PacAction {
             food = getAllFood(grid);
 
             // calc cost table
+            int[][] costTable = makeCostTable(grid, pc);
 
             // calc the stuff bro
             PotentialSolution ps = new PotentialSolution();
@@ -93,6 +94,7 @@ public class PacSimRNNA implements PacAction {
         System.out.println("Cost table:");
         for (int x = 0; x < size; x++){
             for (int y = 0; y < size; y++){
+                System.out.printf("%d", costTable[x][y]);
             }
             System.out.println();
         }
