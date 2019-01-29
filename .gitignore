@@ -1,6 +1,6 @@
 #IntelliJ Related files
 #######################
-*.idea
+**/.idea
 *.iml
 
 # Compiled source

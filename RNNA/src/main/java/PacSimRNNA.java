@@ -1,3 +1,5 @@
+package main.java;
+
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.*;
@@ -17,7 +19,7 @@ public class PacSimRNNA implements PacAction {
 
     private List<Point> path;
     private int simTime;
-    private List<PotentialSolution> potentialSolutions;
+    private List<main.java.PotentialSolution> potentialSolutions;
     private List<Point> food; // he entries in this array should be ordered according to increasing values of the x-value, and for each value of x, according to increasing values of the y-value
 
     public PacSimRNNA( String fname ) {
@@ -35,7 +37,7 @@ public class PacSimRNNA implements PacAction {
     public void init() {
         simTime = 0;
         path = new ArrayList();
-        potentialSolutions = new ArrayList<PotentialSolution>();
+        potentialSolutions = new ArrayList<main.java.PotentialSolution>();
 
     }
 
@@ -56,11 +58,14 @@ public class PacSimRNNA implements PacAction {
 
 
             // calc the stuff bro
-            PotentialSolution ps = new PotentialSolution();
+            main.java.PotentialSolution ps = new main.java.PotentialSolution();
 
+
+            // sort our potential solutions
+            Collections.sort(potentialSolutions);
         }
 
-        Collections.sort(potentialSolutions);
+
 
         PacFace face = null;
         return face;
