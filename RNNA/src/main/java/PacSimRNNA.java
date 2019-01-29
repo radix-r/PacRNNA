@@ -1,5 +1,3 @@
-package main.java;
-
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.*;
@@ -45,8 +43,12 @@ public class PacSimRNNA implements PacAction {
 
     @Override
     public PacFace action( Object state ){
+
         PacCell[][] grid = (PacCell[][]) state;
         PacmanCell pc = PacUtils.findPacman( grid );
+
+        // make sure Pac-Man is in this game
+        if( pc == null ) return null;
 
         // calculate only if list is empty (once)
         if( path.isEmpty() ) {
@@ -55,23 +57,57 @@ public class PacSimRNNA implements PacAction {
             food = getAllFood(grid);
 
             // calc cost table
+            int[][] costTable = makeCostTable(grid, pc);
+
+
 
 
             // calc the stuff bro
             main.java.PotentialSolution ps = new main.java.PotentialSolution();
-
-
-            // sort our potential solutions
-            Collections.sort(potentialSolutions);
         }
 
-
+        Collections.sort(potentialSolutions);
 
         PacFace face = null;
         return face;
     }
 
+    private int[][] makeCostTable(PacCell[][] B, PacmanCell pc){
+
+        // Find each food pellet throughout board
+        List<Point> foodPels = PacUtils.findFood(B);
+
+        // Create Cost Table
+        int size = foodPels.size() + 1;
+        int[][] costTable = new int[size][size];
+
+        for (int i = 1; i < size; i++){
+            int cost = BFSPath.getPath(B, pc.getLoc(), foodPels.get(i - 1)).size();
+            costTable[0][i] = cost;
+            costTable[i][0] = cost;
+        }
+
+        for (int i = 1; i < size; i++) {
+            for (int j = 1; j < size; j++) {
+                costTable[i][j] = BFSPath.getPath(B, foodPels.get(i - 1), foodPels.get(j - 1)).size();
+            }
+        }
+
+        // Print cost table
+        System.out.println("Cost table:");
+        for (int x = 0; x < size; x++){
+            for (int y = 0; y < size; y++){
+                System.out.printf("%d", costTable[x][y]);
+            }
+            System.out.println();
+        }
+
+        System.out.println();
+        return costTable;
+    }
+
     private List<Point> getAllFood(PacCell[][] state){
         return PacUtils.findFood( state);
     }
+
 }
