@@ -2,8 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be9c18eb-27bc-4486-91d5-9b3e7067a93f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/RNNA/src/main/java/PotentialSolution.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/PacRNNA.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PacRNNA.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RNNA/src/PacSimRNNA.java" beforeDir="false" afterPath="$PROJECT_DIR$/RNNA/src/PacSimRNNA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RNNA/out/production/PacRNNA/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/RNNA/out/production/PacRNNA/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RNNA/src/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/RNNA/src/main/java/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RNNA/src/PacSimRNNA.java" beforeDir="false" afterPath="$PROJECT_DIR$/RNNA/src/main/java/PacSimRNNA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RNNA/src/PotentialSolution.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RNNA/tests/PotentialSolutionTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/hamcrest-core-2.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/junit-4.13-beta-1.jar" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,13 +22,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/RNNA/src/PacSimRNNA.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RNNA/src/main/java/PacSimRNNA.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="20" column="193" selection-start-line="20" selection-start-column="193" selection-end-line="20" selection-end-column="193" />
+            <state relative-caret-position="540">
+              <caret line="39" column="70" selection-start-line="39" selection-start-column="43" selection-end-line="39" selection-end-column="70" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1594#1595#0" expanded="true" />
+                <element signature="e#1641#1642#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -28,8 +39,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/replan/PacSimReplan.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="7" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
+            <state relative-caret-position="413">
+              <caret line="60" column="6" selection-start-line="60" selection-start-column="6" selection-end-line="60" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/RNNA/src/main/java/PotentialSolution.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="134">
+              <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -38,9 +58,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RNNA/src/PotentialSolution.java">
+        <entry file="file://$PROJECT_DIR$/RNNA/src/main/test/PotentialSolutionTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="165">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -50,6 +71,14 @@
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="JUnit4 Test Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -58,17 +87,25 @@
       <list>
         <option value="$PROJECT_DIR$/replan/PacSimReplan.java" />
         <option value="$PROJECT_DIR$/RNNA/src/MANIFEST.MF" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/RNNA/src/PotentialSolution.java" />
-        <option value="$PROJECT_DIR$/RNNA/tests/PotentialSolutionTest.java" />
         <option value="$PROJECT_DIR$/RNNA/src/PacSimRNNA.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/RNNA/tests/PotentialSolutionTest.java" />
+        <option value="$PROJECT_DIR$/RNNA/src/PotentialSolution.java" />
+        <option value="$PROJECT_DIR$/RNNA/src/testing/PotentialSolutionTest.java" />
+        <option value="$PROJECT_DIR$/RNNA/src/main/java/PacSimRNNA.java" />
+        <option value="$PROJECT_DIR$/RNNA/src/main/test/PotentialSolutionTest.java" />
+        <option value="$PROJECT_DIR$/RNNA/src/main/java/PotentialSolution.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="23" />
-    <option name="width" value="720" />
-    <option name="height" value="852" />
+  <component name="ProjectFrameBounds" extendedState="4">
+    <option name="x" value="992" />
+    <option name="y" value="24" />
+    <option name="width" value="928" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -81,24 +118,52 @@
         <subPane>
           <expand>
             <path>
-              <item name="PacRNNA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PacRNNA" type="462c0819:PsiDirectoryNode" />
+              <item name="TestAI1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TestAI1" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="PacRNNA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PacRNNA" type="462c0819:PsiDirectoryNode" />
+              <item name="TestAI1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TestAI1" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TestAI1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TestAI1" type="462c0819:PsiDirectoryNode" />
               <item name="replan" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="PacRNNA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PacRNNA" type="462c0819:PsiDirectoryNode" />
+              <item name="TestAI1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TestAI1" type="462c0819:PsiDirectoryNode" />
               <item name="RNNA" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="PacRNNA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PacRNNA" type="462c0819:PsiDirectoryNode" />
+              <item name="TestAI1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TestAI1" type="462c0819:PsiDirectoryNode" />
               <item name="RNNA" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TestAI1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TestAI1" type="462c0819:PsiDirectoryNode" />
+              <item name="RNNA" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TestAI1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TestAI1" type="462c0819:PsiDirectoryNode" />
+              <item name="RNNA" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TestAI1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TestAI1" type="462c0819:PsiDirectoryNode" />
+              <item name="RNNA" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -107,11 +172,27 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/hamcrest-core-2.1.jar!/" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/junit-4.10.jar!/" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/RNNA/src/main/java" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -124,6 +205,63 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager" selected="JUnit.PotentialSolutionTest.addToPathTest">
+    <configuration name="All in PacRNNA" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PacRNNA" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PotentialSolutionTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PacRNNA" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PotentialSolutionTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PotentialSolutionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PacRNNA" />
+      <option name="PACKAGE_NAME" value="main.test" />
+      <option name="MAIN_CLASS_NAME" value="main.test.PotentialSolutionTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PotentialSolutionTest.addToPath" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PacRNNA" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PotentialSolutionTest" />
+      <option name="METHOD_NAME" value="addToPath" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PotentialSolutionTest.addToPathTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PacRNNA" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PotentialSolutionTest" />
+      <option name="METHOD_NAME" value="addToPathTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.PotentialSolutionTest.addToPathTest" />
+        <item itemvalue="JUnit.PotentialSolutionTest.addToPath" />
+        <item itemvalue="JUnit.All in PacRNNA" />
+        <item itemvalue="JUnit.PotentialSolutionTest (1)" />
+        <item itemvalue="JUnit.PotentialSolutionTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -138,6 +276,38 @@
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="All_in_PacRNNA - 2019.01.28 at 16h 03m 00s.xml">
+      <configuration name="All in PacRNNA" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_PacRNNA - 2019.01.28 at 16h 09m 30s.xml">
+      <configuration name="All in PacRNNA" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PotentialSolutionTest - 2019.01.28 at 16h 11m 54s.xml">
+      <configuration name="PotentialSolutionTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PotentialSolutionTest - 2019.01.28 at 16h 12m 23s.xml">
+      <configuration name="PotentialSolutionTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_PacRNNA - 2019.01.29 at 14h 55m 50s.xml">
+      <configuration name="All in PacRNNA" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PotentialSolutionTest_addToPath - 2019.01.29 at 14h 56m 56s.xml">
+      <configuration name="PotentialSolutionTest.addToPath" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PotentialSolutionTest_addToPath - 2019.01.29 at 15h 00m 48s.xml">
+      <configuration name="PotentialSolutionTest.addToPath" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PotentialSolutionTest_addToPathTest - 2019.01.29 at 15h 06m 43s.xml">
+      <configuration name="PotentialSolutionTest.addToPathTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PotentialSolutionTest_addToPathTest - 2019.01.29 at 15h 07m 39s.xml">
+      <configuration name="PotentialSolutionTest.addToPathTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PotentialSolutionTest_addToPathTest - 2019.01.29 at 15h 08m 52s.xml">
+      <configuration name="PotentialSolutionTest.addToPathTest" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
@@ -148,10 +318,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="852" extended-state="6" />
+    <frame x="992" y="24" width="928" height="1056" extended-state="4" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.1695279" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16666667" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -159,16 +329,17 @@
       <window_info id="UI Designer" order="5" />
       <window_info id="Learn" order="6" />
       <window_info id="Favorites" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="0" />
-      <window_info anchor="bottom" id="Run" order="1" />
-      <window_info anchor="bottom" id="Debug" order="2" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="5" weight="0.039473683" />
-      <window_info anchor="bottom" id="Terminal" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.13815789" />
-      <window_info active="true" anchor="bottom" id="Messages" order="9" visible="true" weight="0.32894737" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32831" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32982457" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.24111949" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32788798" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.41227126" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -179,96 +350,64 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
-              <option name="COLUMN_ORDER">
-                <list>
-                  <option value="0" />
-                  <option value="1" />
-                  <option value="2" />
-                  <option value="3" />
-                </list>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="RECENT_FILTERS">
-      <map>
-        <entry key="Branch">
-          <value>
-            <list />
-          </value>
-        </entry>
-        <entry key="User">
-          <value>
-            <list />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RNNA/src/MANIFEST.MF">
+    <entry file="file://$PROJECT_DIR$/RNNA/src/main/java/MANIFEST.MF">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RNNA/tests/PotentialSolutionTest.java">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#258#259#0" expanded="true" />
-            <element signature="e#307#308#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RNNA/src/PotentialSolution.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="30">
+          <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/replan/PacSimReplan.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="7" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
+        <state relative-caret-position="413">
+          <caret line="60" column="6" selection-start-line="60" selection-start-column="6" selection-end-line="60" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RNNA/src/main/java/PacSimRNNA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="39" column="70" selection-start-line="39" selection-start-column="43" selection-end-line="39" selection-end-column="70" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1594#1595#0" expanded="true" />
+            <element signature="e#1641#1642#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RNNA/src/main/test/PotentialSolutionTestBak.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RNNA/src/PacSimRNNA.java">
+    <entry file="file://$PROJECT_DIR$/RNNA/src/main/test/PotentialSolutionTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
-          <caret line="20" column="193" selection-start-line="20" selection-start-column="193" selection-end-line="20" selection-end-column="193" />
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RNNA/src/main/java/PotentialSolution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -332,7 +471,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

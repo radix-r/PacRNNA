@@ -1,5 +1,7 @@
 #IntelliJ Related files
 #######################
+**/.idea
+.idea
 *.idea
 *.iml
 
@@ -9,6 +11,6 @@
 
 # OS generated files
 ###################
-.DS_Store
+**.DS_Store
 #.idea/vcs.xml
 .idea/workspace.xml
