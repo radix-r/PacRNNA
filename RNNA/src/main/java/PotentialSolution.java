@@ -24,10 +24,12 @@ public class PotentialSolution implements Comparable<PotentialSolution> {
     }
 
     int cost;
+    //Point start;
     private List<PointCost> path;
 
     // constructor
     public PotentialSolution(){
+        //this.start = start;
         this.cost = 0;
         this.path = new ArrayList();
     }

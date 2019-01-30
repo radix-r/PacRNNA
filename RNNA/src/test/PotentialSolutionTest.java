@@ -1,18 +1,17 @@
+import main.java.PotentialSolution;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
 import java.awt.*;
 
-import static org.junit.Assert.*;
-
 public class PotentialSolutionTest {
 
-    static main.java.PotentialSolution psTester;
+    static PotentialSolution psTester;
 
     @BeforeClass
     public static void testSetup(){
-        psTester = new main.java.PotentialSolution();
+        psTester = new PotentialSolution();
     }
 
     @Test

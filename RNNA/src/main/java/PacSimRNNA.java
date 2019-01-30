@@ -1,7 +1,11 @@
+package main.java;
+
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.*;
 import java.util.List;
+
+import main.java.PotentialSolution;
 import pacsim.*;
 
 /**
@@ -17,7 +21,7 @@ public class PacSimRNNA implements PacAction {
 
     private List<Point> path;
     private int simTime;
-    private List<main.java.PotentialSolution> potentialSolutions;
+    private List<PotentialSolution> potentialSolutions;
     private List<Point> food; // he entries in this array should be ordered according to increasing values of the x-value, and for each value of x, according to increasing values of the y-value
 
     public PacSimRNNA( String fname ) {
@@ -27,6 +31,7 @@ public class PacSimRNNA implements PacAction {
 
     public static void main( String[] args ) {
         System.out.println("\nTSP using RNNA agent by Bailey Brooks and Ross Wagner:");
+
         System.out.println("\nMaze : " + args[ 0 ] + "\n" );
         new PacSimRNNA( args[ 0 ] );
     }
@@ -35,7 +40,7 @@ public class PacSimRNNA implements PacAction {
     public void init() {
         simTime = 0;
         path = new ArrayList();
-        potentialSolutions = new ArrayList<main.java.PotentialSolution>();
+        potentialSolutions = new ArrayList<PotentialSolution>();
 
     }
 
@@ -53,20 +58,42 @@ public class PacSimRNNA implements PacAction {
         // calculate only if list is empty (once)
         if( path.isEmpty() ) {
 
-            // food array
-            food = getAllFood(grid);
+
 
             // calc cost table
             int[][] costTable = makeCostTable(grid, pc);
 
-
+            // food array
+            food = getAllFood(grid);
 
 
             // calc the stuff bro
-            main.java.PotentialSolution ps = new main.java.PotentialSolution();
+
+
+            // init our population with each food pel
+            int lenFood = food.size();
+            for (int i = 0;i<lenFood;i++){
+                PotentialSolution ps = new PotentialSolution();
+                // i+1 because first food at index 0 but it is 1 in cost table
+                ps.addToPath(food.get(i), costTable[0][i+1]);
+                potentialSolutions.add(ps);
+
+            }
+
+            //print the first step
+            Collections.sort(potentialSolutions);
+            System.out.println("Population at step 1 :\n");
+            int lenPS = potentialSolutions.size();
+            for (int i = 0; i < lenPS; i++){
+                String str = potentialSolutions.get(i).toString();
+                String out = String.format("\t%d : %s",i,str);
+                System.out.println(out);
+            }
+
+            System.exit(0);
         }
 
-        Collections.sort(potentialSolutions);
+
 
         PacFace face = null;
         return face;
@@ -94,20 +121,33 @@ public class PacSimRNNA implements PacAction {
         }
 
         // Print cost table
-        System.out.println("Cost table:");
+        System.out.println("Cost table:\n");
         for (int x = 0; x < size; x++){
+            System.out.printf("\t");
             for (int y = 0; y < size; y++){
-                System.out.printf("%d", costTable[x][y]);
+                System.out.printf("%3d", costTable[x][y]);
             }
             System.out.println();
         }
 
         System.out.println();
+        System.out.println();
         return costTable;
     }
 
     private List<Point> getAllFood(PacCell[][] state){
-        return PacUtils.findFood( state);
+        System.out.println("Food Array\n");
+
+        List<Point> food = PacUtils.findFood( state);
+
+        int lenFood = food.size();
+        for (int i = 0; i< lenFood; i++){
+            Point p = food.get(i);
+            System.out.printf("%d : (%d,%d)\n",i,p.x,p.y);
+        }
+
+        System.out.println();
+        return food;
     }
 
 }
