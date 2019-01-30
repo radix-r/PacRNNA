@@ -7,7 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="be9c18eb-27bc-4486-91d5-9b3e7067a93f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,7 +17,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RNNA/src/main/java/PacSimRNNA.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="990">
@@ -25,6 +25,15 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -81,13 +90,13 @@
         <option value="$PROJECT_DIR$/replan/PacSimReplan.java" />
         <option value="$PROJECT_DIR$/RNNA/src/MANIFEST.MF" />
         <option value="$PROJECT_DIR$/RNNA/src/PacSimRNNA.java" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/RNNA/tests/PotentialSolutionTest.java" />
         <option value="$PROJECT_DIR$/RNNA/src/PotentialSolution.java" />
         <option value="$PROJECT_DIR$/RNNA/src/testing/PotentialSolutionTest.java" />
         <option value="$PROJECT_DIR$/RNNA/src/main/java/PacSimRNNA.java" />
         <option value="$PROJECT_DIR$/RNNA/src/main/test/PotentialSolutionTest.java" />
         <option value="$PROJECT_DIR$/RNNA/src/main/java/PotentialSolution.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -339,6 +348,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="992" y="24" width="928" height="926" extended-state="4" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3106576" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -370,13 +380,6 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/replan/PacSimReplan.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="413">
@@ -420,6 +423,13 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
         </state>
       </provider>
     </entry>
