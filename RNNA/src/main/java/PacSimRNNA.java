@@ -90,8 +90,8 @@ public class PacSimRNNA implements PacAction {
             printPopulation(potentialSolutions);
 
 
-            try {
 
+            try{
                 boolean done = false;
                 while (!done) {
                     step++;
@@ -120,7 +120,7 @@ public class PacSimRNNA implements PacAction {
                         if (closest.size() >= 1) {
                             //ties found. make copie
 
-                            clone = (PotentialSolution) potentialSolutions.get(i).clone();
+                            clone = potentialSolutions.get(i).clone();
 
                             done = false;
 
@@ -138,7 +138,7 @@ public class PacSimRNNA implements PacAction {
                         // make copies for ties
                         for (Integer fi : closest) {
                             Point p = food.get(fi);
-                            PotentialSolution temp = (PotentialSolution) clone.clone();
+                            PotentialSolution temp = clone.clone();
                             temp.addToStops(p, cost, fi);
                             //System.out.printf("Cloned : %s\n",temp.toString());
                             potentialSolutions.add(temp);
@@ -169,7 +169,7 @@ public class PacSimRNNA implements PacAction {
             long endTime = System.nanoTime();
             long duration = (endTime - startTime);
 
-            System.out.printf("\nTime to generate plan: %d msec\n",duration/1000000);
+            System.out.printf("Time to generate plan: %d msec\n",duration/1000000);
 
 
         }

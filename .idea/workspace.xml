@@ -7,15 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="be9c18eb-27bc-4486-91d5-9b3e7067a93f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/PacRNNA.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PacRNNA.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PacRNNA.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RNNA/out/PacRNNA.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RNNA/out/production/PacRNNA/main/java/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/RNNA/out/production/PacRNNA/main/java/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RNNA/src/main/java/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/RNNA/src/main/java/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RNNA/out/PacRNNA.jar" beforeDir="false" afterPath="$PROJECT_DIR$/RNNA/out/PacRNNA.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RNNA/src/main/java/PacSimRNNA.java" beforeDir="false" afterPath="$PROJECT_DIR$/RNNA/src/main/java/PacSimRNNA.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RNNA/src/main/java/PotentialSolution.java" beforeDir="false" afterPath="$PROJECT_DIR$/RNNA/src/main/java/PotentialSolution.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RNNA/test/PotentialSolutionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/RNNA/test/PotentialSolutionTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,11 +19,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RNNA/src/main/java/PacSimRNNA.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="210" column="37" selection-start-line="210" selection-start-column="37" selection-end-line="210" selection-end-column="37" />
+            <state relative-caret-position="50">
+              <caret line="140" column="56" selection-start-line="140" selection-start-column="53" selection-end-line="140" selection-end-column="56" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -40,27 +34,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tsp-tiny.out">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="44" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="18" selection-end-column="44" />
+            <state relative-caret-position="90">
+              <caret line="9" column="21" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/RNNA/src/main/java/PotentialSolution.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="66" column="10" selection-start-line="66" selection-start-column="10" selection-end-line="66" selection-end-column="10" />
+            <state relative-caret-position="275">
+              <caret line="92" column="10" selection-start-line="92" selection-start-column="10" selection-end-line="92" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2084#2085#0" expanded="true" />
-                <element signature="e#2116#2117#0" expanded="true" />
-                <element signature="e#2156#2157#0" expanded="true" />
-                <element signature="e#2189#2190#0" expanded="true" />
-                <element signature="e#2411#2412#0" expanded="true" />
-                <element signature="e#2444#2445#0" expanded="true" />
-                <element signature="e#2480#2481#0" expanded="true" />
-                <element signature="e#2512#2513#0" expanded="true" />
+                <element signature="e#687#688#0" expanded="true" />
+                <element signature="e#732#733#0" expanded="true" />
+                <element signature="e#2204#2205#0" expanded="true" />
+                <element signature="e#2236#2237#0" expanded="true" />
+                <element signature="e#2276#2277#0" expanded="true" />
+                <element signature="e#2309#2310#0" expanded="true" />
+                <element signature="e#2531#2532#0" expanded="true" />
+                <element signature="e#2564#2565#0" expanded="true" />
+                <element signature="e#2600#2601#0" expanded="true" />
+                <element signature="e#2632#2633#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -105,7 +101,10 @@
       <find>7,5</find>
       <find>getNextClosestUnvisited</find>
       <find>1,1</find>
+      <find>[(4,2),1][(2,1),3][</find>
       <find>clone</find>
+      <find>visited</find>
+      <find>clo</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -124,8 +123,8 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/RNNA/src/main/java/META-INF/MANIFEST.MF" />
         <option value="$PROJECT_DIR$/RNNA/test/PotentialSolutionTest.java" />
-        <option value="$PROJECT_DIR$/RNNA/src/main/java/PotentialSolution.java" />
         <option value="$PROJECT_DIR$/RNNA/src/main/java/PacSimRNNA.java" />
+        <option value="$PROJECT_DIR$/RNNA/src/main/java/PotentialSolution.java" />
       </list>
     </option>
   </component>
@@ -380,14 +379,14 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.35430038" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3992298" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32862645" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.22207959" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32788798" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.41112456" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.41078305" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -444,37 +443,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RNNA/src/main/java/PotentialSolution.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="66" column="10" selection-start-line="66" selection-start-column="10" selection-end-line="66" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2084#2085#0" expanded="true" />
-            <element signature="e#2116#2117#0" expanded="true" />
-            <element signature="e#2156#2157#0" expanded="true" />
-            <element signature="e#2189#2190#0" expanded="true" />
-            <element signature="e#2411#2412#0" expanded="true" />
-            <element signature="e#2444#2445#0" expanded="true" />
-            <element signature="e#2480#2481#0" expanded="true" />
-            <element signature="e#2512#2513#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tsp-tiny.out">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="44" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="18" selection-end-column="44" />
+        <state relative-caret-position="90">
+          <caret line="9" column="21" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RNNA/src/main/java/PacSimRNNA.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="210" column="37" selection-start-line="210" selection-start-column="37" selection-end-line="210" selection-end-column="37" />
+        <state relative-caret-position="50">
+          <caret line="140" column="56" selection-start-line="140" selection-start-column="53" selection-end-line="140" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RNNA/src/main/java/PotentialSolution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="92" column="10" selection-start-line="92" selection-start-column="10" selection-end-line="92" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#687#688#0" expanded="true" />
+            <element signature="e#732#733#0" expanded="true" />
+            <element signature="e#2204#2205#0" expanded="true" />
+            <element signature="e#2236#2237#0" expanded="true" />
+            <element signature="e#2276#2277#0" expanded="true" />
+            <element signature="e#2309#2310#0" expanded="true" />
+            <element signature="e#2531#2532#0" expanded="true" />
+            <element signature="e#2564#2565#0" expanded="true" />
+            <element signature="e#2600#2601#0" expanded="true" />
+            <element signature="e#2632#2633#0" expanded="true" />
           </folding>
         </state>
       </provider>

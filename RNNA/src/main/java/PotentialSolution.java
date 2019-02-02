@@ -23,11 +23,16 @@ public class PotentialSolution implements Comparable<PotentialSolution>, Cloneab
             this.cost = cost;
             this.index = index;
         }
+
+        public PointCost clone(){
+            return new PointCost(this.point,this.cost,this.index);
+        }
+
     }
 
     int cost;
     boolean[] visited; // keep track of stops / foods that this solution has visited
-    private List<PointCost> stops; // location and distance of stops for food
+    protected List<PointCost> stops; // location and distance of stops for food
     private int numFood;
 
 
@@ -38,6 +43,14 @@ public class PotentialSolution implements Comparable<PotentialSolution>, Cloneab
         this.stops = new ArrayList();
         this.numFood = numFood;
         this.visited = new boolean[numFood];
+
+    }
+
+    // copy constructor
+    public PotentialSolution(PotentialSolution ps){
+        //this(ps.numFood);
+        //int i = 1;
+
 
     }
 
@@ -53,18 +66,33 @@ public class PotentialSolution implements Comparable<PotentialSolution>, Cloneab
      * Returns a copy of this PotentialSolution
      * */
     @Override
-    public Object clone ()throws CloneNotSupportedException
+    public PotentialSolution clone ()throws CloneNotSupportedException
     {
-        return super.clone();
         /*
+        try {
+
+
+            return (PotentialSolution) super.clone();
+        }catch(CloneNotSupportedException e){
+            throw new AssertionError();
+        }
+        /*
+        */
+
         PotentialSolution ps = new PotentialSolution(this.numFood);
         ps.setCost(this.cost);
-        ps.setStops(this.stops);
-        ps.visited = this.visited;
+        List<PointCost> copy = new ArrayList<>();
+        List<PointCost> original = this.getStops();
+        for(PointCost pc : original ){
+            copy.add((PointCost)pc.clone());
+        }
+
+        ps.setStops(copy);
+        ps.visited = this.visited.clone();
         //ps.numFood = this.numFood;
-        System.out.printf("Cloning : %s\n",ps.toString());
+        //System.out.printf("Cloning : %s\n",ps.toString());
         return ps;
-        */
+
 
     }
 
