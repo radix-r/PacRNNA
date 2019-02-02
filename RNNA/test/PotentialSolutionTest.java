@@ -11,7 +11,7 @@ public class PotentialSolutionTest {
 
     @BeforeClass
     public static void testSetup(){
-        psTester = new PotentialSolution();
+        psTester = new PotentialSolution(1);
     }
 
     @Test
@@ -20,7 +20,7 @@ public class PotentialSolutionTest {
         p.x = 1;
         p.y=2;
 
-        psTester.addToPath(p, 3);
+        psTester.addToStops(p, 3,0);
 
         Assert.assertEquals("addToPath","cost=3 : [(1,2),3]", psTester.toString());
     }
