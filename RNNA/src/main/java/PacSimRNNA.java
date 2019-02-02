@@ -18,11 +18,10 @@ import pacsim.*;
 
 
 public class PacSimRNNA implements PacAction {
-
     private List<Point> path;
     private int simTime;
-    private List<PotentialSolution> potentialSolutions;
-    private List<Point> food; // he entries in this array should be ordered according to increasing values of the x-value, and for each value of x, according to increasing values of the y-value
+    private List<main.java.PotentialSolution> potentialSolutions;
+    // he entries in this array should be ordered according to increasing values of the x-value, and for each value of x, according to increasing values of the y-value
 
     public PacSimRNNA( String fname ) {
         PacSim sim = new PacSim( fname );
@@ -58,13 +57,16 @@ public class PacSimRNNA implements PacAction {
         // calculate only if list is empty (once)
         if( path.isEmpty() ) {
 
+            // start timer
+            long startTime = System.nanoTime();
+
 
 
             // calc cost table
             int[][] costTable = makeCostTable(grid, pc);
 
             // food array
-            food = getAllFood(grid);
+            List<Point> food = getAllFood(grid);
 
 
             // calc the stuff bro
@@ -72,30 +74,111 @@ public class PacSimRNNA implements PacAction {
 
             // init our population with each food pel
             int lenFood = food.size();
+            int step =0;
             for (int i = 0;i<lenFood;i++){
-                PotentialSolution ps = new PotentialSolution();
+                PotentialSolution ps = new PotentialSolution(lenFood);
                 // i+1 because first food at index 0 but it is 1 in cost table
-                ps.addToPath(food.get(i), costTable[0][i+1]);
+                ps.addToStops(food.get(i), costTable[0][i+1],i);
                 potentialSolutions.add(ps);
 
             }
 
             //print the first step
             Collections.sort(potentialSolutions);
-            System.out.println("Population at step 1 :\n");
-            int lenPS = potentialSolutions.size();
-            for (int i = 0; i < lenPS; i++){
-                String str = potentialSolutions.get(i).toString();
-                String out = String.format("\t%d : %s",i,str);
-                System.out.println(out);
+            System.out.printf("Population at step %d :\n", step);
+
+            printPopulation(potentialSolutions);
+
+
+
+            try{
+                boolean done = false;
+                while (!done) {
+                    step++;
+                    done = true;
+
+                    // iterate through potentialSolutions and append each uneaten dot to and its cost to path
+                    int lenPS = potentialSolutions.size();
+                    for (int i = 0; i < lenPS; i++) {
+
+
+                        // add copies with tied nearest neighbor. Look at cost table for ties.
+                        // get index in food array of most recent stop
+                        int currentStop = potentialSolutions.get(i).getCurrentStop().index;
+                        boolean[] visited = potentialSolutions.get(i).visited;
+
+                        // get next unvisited. list for ties. using cost table
+                        List<Integer> closest = getNextClosestUnvisited(visited, currentStop, costTable);
+
+                        //debug
+                        //System.out.println(closest);
+
+                        int cost = closest.remove(0);
+
+
+                        PotentialSolution clone;
+                        if (closest.size() >= 1) {
+                            //ties found. make copie
+
+                            clone = potentialSolutions.get(i).clone();
+
+                            done = false;
+
+                        } else {
+                            // all food eaten
+                            continue;
+                        }
+
+                        // get index of first closest unvisited food
+                        int foodIndex = closest.remove(0);
+
+                        potentialSolutions.get(i).addToStops(food.get(foodIndex), cost, foodIndex);
+
+
+                        // make copies for ties
+                        for (Integer fi : closest) {
+                            Point p = food.get(fi);
+                            PotentialSolution temp = clone.clone();
+                            temp.addToStops(p, cost, fi);
+                            //System.out.printf("Cloned : %s\n",temp.toString());
+                            potentialSolutions.add(temp);
+                        }
+
+                        // stop when all paths have eaten all dots
+
+                        // update the size
+                        lenPS = potentialSolutions.size();
+                    }
+                }
+            }catch (CloneNotSupportedException c){
+                System.out.println("Failed clone");
+                System.exit(1);
             }
 
-            System.exit(0);
+
+            System.out.printf("Population at step %d :\n", step);
+            // sort potential solutions
+            Collections.sort(potentialSolutions);
+
+            // print final population
+            printPopulation(potentialSolutions);
+
+            // generate path from best solution
+
+            // stop timer
+            long endTime = System.nanoTime();
+            long duration = (endTime - startTime);
+
+            System.out.printf("Time to generate plan: %d msec\n",duration/1000000);
+
+
         }
 
-
-
-        PacFace face = null;
+        System.exit(0);
+        Point next = path.remove( 0 );
+        PacFace face = PacUtils.direction( pc.getLoc(), next );
+        System.out.printf( "%5d : From [ %2d, %2d ] go %s%n",
+                ++simTime, pc.getLoc().x, pc.getLoc().y, face );
         return face;
     }
 
@@ -125,7 +208,7 @@ public class PacSimRNNA implements PacAction {
         for (int x = 0; x < size; x++){
             System.out.printf("\t");
             for (int y = 0; y < size; y++){
-                System.out.printf("%3d", costTable[x][y]);
+                System.out.printf("%4d", costTable[x][y]);
             }
             System.out.println();
         }
@@ -133,6 +216,18 @@ public class PacSimRNNA implements PacAction {
         System.out.println();
         System.out.println();
         return costTable;
+    }
+
+    private void printPopulation(List<PotentialSolution> potentialSolutions){
+
+        int lenPS = potentialSolutions.size();
+        for (int i = 0; i < lenPS; i++){
+            String str = potentialSolutions.get(i).toString();
+            String out = String.format("\t%d : %s",i,str);
+            System.out.println(out);
+        }
+        System.out.printf("\n");
+
     }
 
     private List<Point> getAllFood(PacCell[][] state){
@@ -148,6 +243,43 @@ public class PacSimRNNA implements PacAction {
 
         System.out.println();
         return food;
+    }
+
+    /**
+     * returns the min cost followed by the indexes of points with that cost in terms of food array indexing
+     *
+     * */
+    private List<Integer> getNextClosestUnvisited(boolean[]visited, int currentStop, int[][]costTable){
+
+        int len = visited.length;
+        List<Integer> minIndexes = new ArrayList<>();
+
+        // find min
+        int min = Integer.MAX_VALUE;
+        for (int i =1;i<=len;i++){
+            if (visited[i-1]){
+                // skip if we have already been there
+                continue;
+            }
+            if (costTable[currentStop+1][i] < min){
+                min = costTable[currentStop+1][i];
+            }
+
+        }
+        minIndexes.add(min);
+        for (int i = 1; i <= len; i++){
+            if (visited[i-1]){
+                // skip if we have already been there
+                continue;
+            }
+            if (costTable[currentStop+1][i] == min){
+                minIndexes.add(i-1);
+            }
+
+        }
+        return minIndexes;
+
+
     }
 
 }
