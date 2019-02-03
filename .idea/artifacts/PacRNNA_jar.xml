@@ -3,8 +3,11 @@
     <output-path>$PROJECT_DIR$/RNNA/out</output-path>
     <root id="archive" name="PacRNNA.jar">
       <element id="module-output" name="PacRNNA" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/lib/hamcrest-all-1.3.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/lib/junit-4.10.jar" path-in-jar="/" />
+      <element id="file-copy" path="$PROJECT_DIR$/RNNA/src/main/java/PotentialSolution.java" />
+      <element id="file-copy" path="$PROJECT_DIR$/RNNA/src/main/java/PacSimRNNA.java" />
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/RNNA/src/main/java/META-INF/MANIFEST.MF" />
+      </element>
     </root>
   </artifact>
 </component>
