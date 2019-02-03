@@ -172,7 +172,7 @@ public class PacSimRNNA implements PacAction {
             long duration = (endTime - startTime);
 
             System.out.printf("Time to generate plan: %d msec\n",duration/1000000);
-
+            System.out.println("\nSolution moves:");
 
         }
 
@@ -291,16 +291,16 @@ public class PacSimRNNA implements PacAction {
 
         finalList.add(bestPath.stops.get(0).point);
         for(int i = 0; i < bestPath.stops.size() - 1; i++){
-            System.out.println(bestPath.stops.get(i).point);
+            //System.out.println(bestPath.stops.get(i).point);
             tempList = BFSPath.getPath(G, bestPath.stops.get(i).point, bestPath.stops.get(i + 1).point);
             for (int j = 0; j < tempList.size(); j++) {
                 finalList.add(tempList.get(j));
             }
         }
-        System.out.println();
-        for(int i = 0; i < finalList.size(); i++) {
-            System.out.println(finalList.get(i));
-        }
+        //System.out.println();
+        //for(int i = 0; i < finalList.size(); i++) {
+            //System.out.println(finalList.get(i));
+        //}
 
         return finalList;
 
