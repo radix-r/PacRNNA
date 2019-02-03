@@ -164,6 +164,8 @@ public class PacSimRNNA implements PacAction {
             printPopulation(potentialSolutions);
 
             // generate path from best solution
+            path = getFinalPath(grid, potentialSolutions.get(0));
+
 
             // stop timer
             long endTime = System.nanoTime();
@@ -174,7 +176,7 @@ public class PacSimRNNA implements PacAction {
 
         }
 
-        System.exit(0);
+        //System.exit(0);
         Point next = path.remove( 0 );
         PacFace face = PacUtils.direction( pc.getLoc(), next );
         System.out.printf( "%5d : From [ %2d, %2d ] go %s%n",
@@ -279,6 +281,28 @@ public class PacSimRNNA implements PacAction {
         }
         return minIndexes;
 
+
+    }
+
+    private List<Point> getFinalPath(PacCell[][] G, PotentialSolution bestPath){
+
+        List<Point> finalList = new ArrayList<>();
+        List<Point> tempList = null;
+
+        finalList.add(bestPath.stops.get(0).point);
+        for(int i = 0; i < bestPath.stops.size() - 1; i++){
+            System.out.println(bestPath.stops.get(i).point);
+            tempList = BFSPath.getPath(G, bestPath.stops.get(i).point, bestPath.stops.get(i + 1).point);
+            for (int j = 0; j < tempList.size(); j++) {
+                finalList.add(tempList.get(j));
+            }
+        }
+        System.out.println();
+        for(int i = 0; i < finalList.size(); i++) {
+            System.out.println(finalList.get(i));
+        }
+
+        return finalList;
 
     }
 
